@@ -1,0 +1,65 @@
+<div id="altGoalsBot" class="modal modal-card" tabindex="-1" role="dialog" aria-hidden="true" data-keyboard="false"
+  data-backdrop="static">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">
+          Chat Bot
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div class="chatbot-box-main">
+          <div class="chatbot-box" #scrollMe>
+            <div #messageRef *ngFor="let question of chats;let chatIndex=index">
+              <div class="sender-msg" *ngIf="question.sender == 'CAM'">
+                <span class="image-block">
+                  <img src="assets/chat-user.svg" alt="">
+                </span>
+                <div class="msg-block">
+                  <p class="msg-header">
+                    <b class="bold">Cam</b> <span
+                      class="date-time">{{question.date | date: 'MM/dd/yyyy h:mm:ss'}}</span>
+                  </p>
+                  <div class="msg-body">
+                    {{question.message}}
+                  </div>
+                  <div class="msg-body pointer option-names"
+                    *ngFor="let option of question.options;let optionIndex = index"
+                    (click)="onOptionClick(option, option.next, chatIndex)">
+                    <div class="option">
+                      {{optionIndex+1}}: {{option.option}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sender-msg" *ngIf="question.isLastQuestion">
+                <span class="image-block">
+                  <img src="assets/chat-user.svg" alt="">
+                </span>
+                <div class="msg-block">
+                  <p class="msg-header">
+                    <b class="bold">Cam</b> <span class="date-time">{{dateTime | date: 'MM/dd/yyyy h:mm:ss'}}</span>
+                  </p>
+                  <div class="msg-body">
+                    <h1>Thank you For Chat.</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="my-msg" *ngIf="question.sender == 'YOU'">
+                <div class="msg-block">
+                  <p class="msg-header">
+                    <b class="bold">You</b> <span
+                      class="date-time">{{question.date | date: 'MM/dd/yyyy h:mm:ss'}}</span>
+                  </p>
+                  <div class="msg-body">
+                    {{question.message}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  

@@ -1,0 +1,199 @@
+.chatbot-box-main {
+    padding-top: 20px;
+    padding-right: 15px;
+    @media (max-width: 1023px) {
+      padding: 10px;
+    }
+    @media (max-width: 991px) {
+      padding: 8px;
+    }
+    .chatbot-box {
+      border: 1px solid #bcbec0;
+      padding: 16px;
+      position: relative;
+      z-index: 0;
+      max-height: 70vh;
+      overflow: auto;
+      // background: url(../../../../../assets/image/chat-bg.svg) top left/contain;
+      @media (max-width: 991px) {
+        padding: 10px;
+      }
+      @media (max-width: 575px) {
+        padding: 5px;
+      }
+    }
+  }
+  .sender-msg {
+    display: flex;
+    align-items: flex-end;
+    margin: 15px 0;
+    .image-block {
+      margin-right: 10px;
+      display: block;
+      margin-bottom: 10px;
+      img {
+        width: 38px;
+        @media (max-width: 991px) {
+          width: 36px;
+        }
+        @media (max-width: 767px) {
+          width: 35px;
+        }
+        @media (max-width: 575px) {
+          width: 34px;
+        }
+        @media (max-width: 480px) {
+          width: 32px;
+        }
+        @media (max-width: 375px) {
+          width: 30px;
+        }
+      }
+    }
+  }
+  
+  .msg-block {
+    border: 1px solid #bcbec0;
+    background: #fff;
+    padding: 10px 12px;
+    border-radius: 10px;
+    flex: 1;
+    .msg-header {
+      font-size: 12px;
+      color: #000;
+      height: auto;
+      margin-bottom: 0;
+  
+      .bold {
+        font-weight: 700;
+        margin-right: 4px;
+      }
+    }
+    .msg-body {
+      padding: 10px 0 0;
+      font-size: 14px;
+      color: #333;
+      font-weight: 400;
+    }
+    @media (max-width: 991px) {
+      padding: 8px 10px;
+    }
+    @media (max-width: 767px) {
+      .msg-header {
+        font-size: 11px;
+      }
+      .msg-body {
+        padding: 5px 0 0;
+        font-size: 13px;
+      }
+    }
+  }
+  
+  .my-msg {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .chatbox-enter-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background: #eee;
+    @media (max-width: 991px) {
+      padding: 10px;
+    }
+    @media (max-width: 767px) {
+      padding: 8px;
+    }
+    @media (max-width: 575px) {
+      padding: 6px;
+    }
+    .form-control {
+      border: 1px solid #eee;
+      height: auto;
+      padding: 10px 12px !important;
+      @media (max-width: 575px) {
+        padding: 8px 12px !important;
+      }
+      &::placeholder {
+        color: #ccc;
+      }
+    }
+    .btn {
+      padding: 11px 12px !important;
+      line-height: 1;
+      border-radius: 10px !important;
+      @media (max-width: 767px) {
+        border-radius: 7px !important;
+        padding: 10px 12px !important;
+      }
+      @media (max-width: 575px) {
+        padding: 9px 6px !important;
+      }
+      @media (max-width: 375px) {
+        border-radius: 4px !important;
+        font-size: 11px;
+        padding: 8px 4px !important;
+      }
+      &.btn-dark {
+        background: #02253e;
+        color: #fff;
+      }
+      &.btn-icon {
+        font-size: 28px;
+        padding: 4px 10px !important;
+        border-radius: 6px !important;
+        &.right {
+          margin-left: 10px;
+        }
+        &.left {
+          margin-right: 10px;
+        }
+        @media (max-width: 767px) {
+          font-size: 25px;
+        }
+        @media (max-width: 575px) {
+          font-size: 14px;
+          padding: 8px 7px !important;
+          border-radius: 5px !important;
+          &.right {
+            margin-left: 6px;
+          }
+          &.left {
+            margin-right: 6px;
+          }
+        }
+        @media (max-width: 375px) {
+          font-size: 13px;
+          padding: 7px 7px !important;
+          border-radius: 5px !important;
+          &.right {
+            margin-left: 4px;
+          }
+          &.left {
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  
+    .btn-save {
+      margin-left: 10px;
+      @media (max-width: 575px) {
+        margin-left: 5px;
+      }
+    }
+  }
+  
+  .option {
+      border: 1px solid #d6e4f1;
+      padding: 10px!important;
+      margin-left: 10px;
+      border-radius: 5px;
+      width: 50%;
+      background: #d6e4f1;
+    }
+  .option-names:hover .option {
+      background-color: #a6d1f9;
+  }
